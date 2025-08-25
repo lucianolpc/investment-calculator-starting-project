@@ -1,7 +1,13 @@
+import Header from "./components/Header";
+import MainBody from "./components/MainBody";
+
 function App() {
   return (
-    <h1>React Investment Calculator</h1>
-  )
+    <>
+      <Header />
+      <MainBody />
+    </>
+  );
 }
 
-export default App
+export default App;
