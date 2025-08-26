@@ -65,6 +65,11 @@ body {
   font-size: 1rem;
 }
 
+#user-input p {
+  font-size: 0.75rem;
+  color: yellow;
+}
+
 #result {
   max-width: 50rem;
   margin: 2rem auto;
@@ -85,6 +90,12 @@ body {
   color: #c2e9e0;
 }
 
+#result th, #result td {
+  padding: 0.5rem;
+}
+
 .center {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }

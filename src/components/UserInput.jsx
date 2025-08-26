@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import InputBlock from "./InputBlock";
 
-export default function UserInput({ handleChange, values }) {
+export default function UserInput({ handleChange, values }) {  
   return (
     <section id="user-input" className="input-group">
       <InputBlock

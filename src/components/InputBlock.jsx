@@ -6,6 +6,8 @@ export default function InputBlock({
   initialValue,
   changeHandler,
 }) {
+  const errorMessage = initialValue < 0 ? <p>Invalid number!</p> : null;
+
   return (
     <div>
       <label htmlFor={inputName}>{inputName}</label>
@@ -15,6 +17,7 @@ export default function InputBlock({
         type="number"
         onChange={(event) => changeHandler(event.target.value, inputId)}
       />
+      {errorMessage}
     </div>
   );
 }

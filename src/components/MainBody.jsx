@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { calculateInvestmentResults } from "../util/investment";
+
 import UserInput from "./UserInput";
 import Results from "./Results";
 
@@ -18,15 +20,17 @@ export default function MainBody() {
     setValues(oldValues => {
       return {
         ...oldValues,
-        [inputName]: value,
+        [inputName]: parseFloat(value),
       }
     });
   }
 
+  const results = calculateInvestmentResults({...values});
+
   return (
     <main>
       <UserInput handleChange={handleChange} values={values}/>
-      <Results />
+      <Results results={results} />
     </main>
   );
 }
