@@ -40,8 +40,7 @@ body {
 }
 
 .input-group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   justify-content: space-evenly;
   gap: 1.5rem;
 }
@@ -65,7 +64,7 @@ body {
   font-size: 1rem;
 }
 
-#user-input p {
+#user-input p.error-message {
   font-size: 0.75rem;
   color: yellow;
 }

@@ -12,4 +12,7 @@ Na plataforma de ensino online **[Udemy](https://www.udemy.com/)**.
 
 ## Lista de aulas realizadas deste projeto:
 
--
+- 97 - Module Introduction & A Challenge For You!
+- 98 - Adding a Header Component
+- 99 - Getting Started with a User Input Component
+- 100 - Handling Events & Using Two-Way-Binding

@@ -1,39 +1,70 @@
-import PropTypes from "prop-types";
+import { useState } from "react";
 
-import InputBlock from "./InputBlock";
+export default function UserInput() {
+  const [userInput, setUserInput] = useState({
+    initialInvestment: 10000,
+    annualInvestment: 1200,
+    expectedReturn: 6,
+    duration: 10,
+  });
 
-export default function UserInput({ handleChange, values }) {  
+  function handleChange(inputIdentifier, newValue) {
+    setUserInput((prevUserInput) => {
+      return {
+        ...prevUserInput,
+        [inputIdentifier]: newValue,
+      };
+    });
+  }
+
   return (
-    <section id="user-input" className="input-group">
-      <InputBlock
-        inputId="initialInvestment"
-        inputName="Initial Investment"
-        initialValue={values.initialInvestment}
-        changeHandler={handleChange}
-      />
-      <InputBlock
-        inputId="annualInvestment"
-        inputName="Annual Investment"
-        initialValue={values.annualInvestment}
-        changeHandler={handleChange}
-      />
-      <InputBlock
-        inputId="expectedReturn"
-        inputName="Expected Return"
-        initialValue={values.expectedReturn}
-        changeHandler={handleChange}
-      />
-      <InputBlock
-        inputId="duration"
-        inputName="Duration"
-        initialValue={values.duration}
-        changeHandler={handleChange}
-      />
+    <section id="user-input">
+      <div className="input-group">
+        <p>
+          <label htmlFor="">Initial Investment</label>
+          <input
+            type="number"
+            required
+            value={userInput.initialInvestment}
+            onChange={(event) =>
+              handleChange("initialInvestment", event.target.value)
+            }
+          />
+        </p>
+        <p>
+          <label htmlFor="">Annual Investment</label>
+          <input
+            type="number"
+            required
+            value={userInput.annualInvestment}
+            onChange={(event) =>
+              handleChange("annualInvestment", event.target.value)
+            }
+          />
+        </p>
+      </div>
+      <div className="input-group">
+        <p>
+          <label htmlFor="">Expected Return</label>
+          <input
+            type="number"
+            required
+            value={userInput.expectedReturn}
+            onChange={(event) =>
+              handleChange("expectedReturn", event.target.value)
+            }
+          />
+        </p>
+        <p>
+          <label htmlFor="">Duration</label>
+          <input
+            type="number"
+            required
+            value={userInput.duration}
+            onChange={(event) => handleChange("duration", event.target.value)}
+          />
+        </p>
+      </div>
     </section>
   );
 }
-
-UserInput.propTypes = {
-  handleChange: PropTypes.func.isRequired,
-  values: PropTypes.object.isRequired,
-};
