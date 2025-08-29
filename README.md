@@ -16,3 +16,7 @@ Na plataforma de ensino online **[Udemy](https://www.udemy.com/)**.
 - 98 - Adding a Header Component
 - 99 - Getting Started with a User Input Component
 - 100 - Handling Events & Using Two-Way-Binding
+- 101 - Lifting State Up
+- 102 - Computing Values & Properly Handling Number Values
+- 103 - Outputting Results in a List & Deriving More Values
+- 104 - Outputting Content Conditionally
